@@ -4,7 +4,7 @@
 #
 Name     : R-mixtools
 Version  : 1.1.0
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/mixtools_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mixtools_1.1.0.tar.gz
 Summary  : Tools for Analyzing Finite Mixture Models
