@@ -4,16 +4,16 @@
 #
 Name     : R-mixtools
 Version  : 1.1.0
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/mixtools_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mixtools_1.1.0.tar.gz
 Summary  : Tools for Analyzing Finite Mixture Models
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-mixtools-lib
+Requires: R-mixtools-lib = %{version}-%{release}
 Requires: R-segmented
 BuildRequires : R-segmented
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 No detailed description available
@@ -34,11 +34,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523319308
+export SOURCE_DATE_EPOCH=1552810392
 
 %install
+export SOURCE_DATE_EPOCH=1552810392
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523319308
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library mixtools|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  mixtools || :
 
 
 %files
@@ -116,7 +115,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/mixtools/help/paths.rds
 /usr/lib64/R/library/mixtools/html/00Index.html
 /usr/lib64/R/library/mixtools/html/R.css
-/usr/lib64/R/library/mixtools/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
