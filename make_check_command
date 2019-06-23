@@ -1,0 +1,1 @@
+R CMD check --no-manual --no-examples --no-codoc --no-vignettes mixtools || :
