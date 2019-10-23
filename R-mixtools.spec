@@ -4,7 +4,7 @@
 #
 Name     : R-mixtools
 Version  : 1.1.0
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/mixtools_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mixtools_1.1.0.tar.gz
 Summary  : Tools for Analyzing Finite Mixture Models
@@ -14,6 +14,7 @@ Requires: R-mixtools-lib = %{version}-%{release}
 Requires: R-segmented
 BuildRequires : R-segmented
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 No detailed description available
@@ -34,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562621564
+export SOURCE_DATE_EPOCH=1571867033
 
 %install
-export SOURCE_DATE_EPOCH=1562621564
+export SOURCE_DATE_EPOCH=1571867033
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
