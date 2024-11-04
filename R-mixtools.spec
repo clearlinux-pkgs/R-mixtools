@@ -4,7 +4,7 @@
 #
 Name     : R-mixtools
 Version  : 2.0.0
-Release  : 53
+Release  : 54
 URL      : https://cran.r-project.org/src/contrib/mixtools_2.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mixtools_2.0.0.tar.gz
 Summary  : Tools for Analyzing Finite Mixture Models
